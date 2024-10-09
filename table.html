@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        button{
+          background-color: black;
+          color: white;
+          font-weight: bold;
+          padding: 10px;
+          border-radius: 5px;
+        }
+    </style>
+    <script>
+        function GenerateClick() {
+            document.getElementById("container").innerHTML = "";
+            var table = document.createElement("table");
+            
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+            
+            
+            var tr_for_head = document.createElement("tr");
+            var th1 = document.createElement("th");
+            var th2 = document.createElement("th");
+            var th3 = document.createElement("th");
+
+            th1.innerHTML = " Subject Name";
+            th2.innerHTML = "Marks";
+            th3.innerHTML = "Grade";
+
+            tr_for_head.appendChild(th1);
+            tr_for_head.appendChild(th2);
+            tr_for_head.appendChild(th3);
+            thead.appendChild(tr_for_head);
+            
+            
+            var tr_for_body1 = document.createElement("tr");
+            var td11 = document.createElement("td");
+            var td12 = document.createElement("td");
+            var td13 = document.createElement("td");
+
+            td11.innerHTML = "English";
+            td12.innerHTML = "90";
+            td13.innerHTML = "A";
+
+            tr_for_body1.appendChild(td11);
+            tr_for_body1.appendChild(td12);
+            tr_for_body1.appendChild(td13);
+            
+            var tr_for_body2 = document.createElement("tr");
+            var td21 = document.createElement("td");
+            var td22 = document.createElement("td");
+            var td23 = document.createElement("td");
+
+            td21.innerHTML = "Hindi";
+            td22.innerHTML = "85";
+            td23.innerHTML = "B";
+
+            tr_for_body2.appendChild(td21);
+            tr_for_body2.appendChild(td22);
+            tr_for_body2.appendChild(td23);
+            
+            var tr_for_body3 = document.createElement("tr");
+            var td31 = document.createElement("td");
+            var td32 = document.createElement("td");
+            var td33 = document.createElement("td");
+
+            td31.innerHTML = "Telugu";
+            td32.innerHTML = "95";
+            td33.innerHTML = "A";
+
+            tr_for_body3.appendChild(td31);
+            tr_for_body3.appendChild(td32);
+            tr_for_body3.appendChild(td33);
+
+            var tr_for_body4 = document.createElement("tr");
+            var td41 = document.createElement("td");
+            var td42 = document.createElement("td");
+            var td43 = document.createElement("td");
+
+            td41.innerHTML = "Mathematics";
+            td42.innerHTML = "90";
+            td43.innerHTML = "A";
+
+            tr_for_body4.appendChild(td41);
+            tr_for_body4.appendChild(td42);
+            tr_for_body4.appendChild(td43);
+
+            var tr_for_body5 = document.createElement("tr");
+            var td51 = document.createElement("td");
+            var td52 = document.createElement("td");
+            var td53 = document.createElement("td");
+
+            td51.innerHTML = "Science";
+            td52.innerHTML = "80";
+            td53.innerHTML = "B";
+
+            tr_for_body5.appendChild(td51);
+            tr_for_body5.appendChild(td52);
+            tr_for_body5.appendChild(td53);
+
+            
+            tbody.appendChild(tr_for_body1);
+            tbody.appendChild(tr_for_body2);
+            tbody.appendChild(tr_for_body3);
+            tbody.appendChild(tr_for_body4);
+            tbody.appendChild(tr_for_body5);
+            
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            document.getElementById("container").appendChild(table);
+        }
+    </script>
+</head>
+<body style="padding-top: 1%;padding-left: 2%;">
+    <h2 style="color: rgb(26, 0, 222);"> Students Marks List</h2>
+    <button onclick="GenerateClick()">Click Here</button>
+    <div id="container" style="margin-top: 10px;"></div>
+</body>
+</html>
+
